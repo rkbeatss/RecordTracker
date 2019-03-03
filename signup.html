@@ -28,30 +28,30 @@
       
       
       <form action="signup.html">
-          <button type="button" class="btn btn-outline-primary">Login</button>
-          <button type="submit" class="btn btn-primary" value="hello">SignUp</button>
+         <!-- <button type="button" class="btn btn-outline-primary">Login</button> -->
+          <button type="submit" class="btn btn-primary" value="hello">Sign Up</button>
       
       </form>  
   </div>
 </nav>    
     </div>
         
-    <form action="#">
+    <form action="formhandle.html">
   	<div class="row">
     <label for="firstname">First Name </label>
-    <input type="text" id="firstname" name="firstname" placeholder="Your first name..">
+    <input type="text" id="firstname" name="firstname" placeholder="Your first name.." required autofocus>
 	</div>
 	<div class="row">
     <label for="lastname">Last Name </label> 
-    <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required>
 	</div>
 	<div class="row">
     <label for="email">E-mail</label> 
-    <input type="text" id="email" name="email" placeholder="Enter email">
+    <input type="text" id="email" name="email" placeholder="Enter email" required>
 	</div>
 	<div class="row">
     <label for="password">Password</label> 
-    <input type="text" id="password" name="password" placeholder="Enter your password">
+    <input type="password" id="password" name="password" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" title = "Password must be 8 or more characters, contain atleast one number, and atleast one uppercase letter" required>
 	</div>
 	<!-- sign up looks weird for now -->
 	<div class="row">
