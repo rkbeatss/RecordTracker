@@ -1,4 +1,13 @@
-input[type=email], select {
+html { 
+  background: url(./assets/o-BABY-VACCINE-facebook.jpg) no-repeat center center fixed #000; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* input[type=email], select {
   padding: 12px; 
   border: 1px solid #ccc; 
   border-radius: 4px; 
@@ -15,25 +24,24 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
+} */
 
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 5px;
-}
 h1{
-  position: fixed; top: 25%;   vertical-align: middle;
+  position: fixed; top: 30%; left:5%;  vertical-align: middle;
+
 }
 
 p{
-  position: fixed; top: 30%;  vertical-align: middle;
+  position: fixed; top: 36%; left:5%;  vertical-align: middle;
+  color:white;
 }
 
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
+  margin-left: auto; 
+  margin-right: auto;
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
