@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class=".navbar">
+    <div class=".navbar shadow">
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -29,18 +29,37 @@
                         <!--        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
                     </li>
                 </ul>
-
-                <form>
-                    <button type="button" class="btn btn-outline-primary"
-                        onclick="document.getElementById('id01').style.display='block'">Log in</button>
-                    <button type="button" class="btn btn-primary"
-                        onclick="document.getElementById('id02').style.display='block'">Sign up</button>
+                <form action="./index.html">
+                    <button type="submit" class="btn btn-primary">Sign out</button>
                 </form>
             </div>
         </nav>
     </div> <!-- End of Nav-->
 
-    
+    <div class="container">
+        <h2>Welcome, Ketan</h2>
+        <h3>Your Infant Profile(s)</h3>
+        <form class="form-inline">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Add an infant profile</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <input class="form-control col-1" type="text" id="numPanels" />
+            <button type="button" class="btn btn-info" id="btnGen">Generate</button>
+
+        </form>
+        <br>
+        <div class="row" id="contentPanel">
+
+        </div>
+    </div>
 </body>
 
 </html>
