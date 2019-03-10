@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
         integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -20,6 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
 </head>
 
@@ -60,16 +62,14 @@
     <div class="container">
         <h2>Vaccine Search</h2>
         <form class="form-inline my-2 my-lg-0 float-right">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search for vaccine or disease" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                
+                <input class="form-control mr-sm-2" id="inputText" type="search" placeholder="Search for vaccine or disease" aria-label="Search">         
         </form>
         <br>
         <div style="padding-top: 30px;">
-            <table class="table table-striped">
+            <table class="table table-striped" id="myData">
                 <thead>
                     <tr>
-                        <th scope="col">Age(s) of Administraion</th>
+                        <th scope="col">Age(s) of Administration</th>
                         <th scope="col">Disease</th>
                         <th scope="col">Vaccine</th>
                         <th scope="col">Description</th>
@@ -85,38 +85,50 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <th scope="row">12 to 15 months <br> 4 years old</th>
+                        <td>Varicella</td>
+                        <td>Chickenpox Vaccine </td>
+                        <td>Chickenpox is a viral infection caused by the varicella zoster virus (VZV). While the origin of the term chickenpox is unknown, some believe that it was derived from chickpeas due to the blisters’ resemblance to chickpeas.</td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <th scope="row">12 through 23 months</th>
+                        <td>Hepatitis A</td>
+                        <td>Hepatitis A Vaccine</td>
+                        <td>Hepatitis A, sometimes called hep A or HAV, is the mild form of acute infectious liver disease that normally has no lasting consequences and subsides without a specific treatment. While most infected people experience no or mild symptoms, some become severely ill for several months. The hepatitis A virus (HAV) is a RNA virus of the picornavirus family that infects and replicates in liver cells.</td>
                     </tr>
                     <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">6 months and older</th>
+                            <td>Hepatitis B</td>
+                            <td>Hepatitis B Vaccine</td>
+                            <td>Hepatitis B, sometimes called hep B or HPB, is the name of a virus that attacks the liver. It is a hepadnavirus (hepa from hepatotropic – infectious and replicating in the liver – and dna because it is a DNA virus). Once contracted, the virus replicates in the liver and spreads to the blood. Most people who get infected with hepatitis B develop the acute form of the disease. The illness just lasts for just a few weeks and most recover fully. Yet, few people may develop severe liver disease (fulminant hepatic failure) and may even die as a result.</td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
+                            <th scope="row">2 months <br> 6 to 18 months <br> 4 to 6 years</th>
+                            <td>Polio</td>
+                            <td>Inactivated Polio Vaccine</td>
+                            <td>Poliomyelitis, or Polio as it is more commonly known, is a debilitating disease that affects the central nervous system (CNS) of those it infects. The infection attacks motor neurons and gradually causes paralysis and an inability to survive without life support. The term Poliomyelitis comes from the Greek terms polios and myelos, which mean “grey” and “marrow,” while the suffix itis is commonly used to describe inflammation.</td>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
+                            <th scope="row">12 to 15 months <br> 4 to 6 years</th>
+                            <td>Measles, Mumps, Rubella</td>
+                            <td>MMR Vaccine</td>
+                            <td>Measles, mumps, and rubella are viral diseases that can be life-threatening in extreme cases. These three diseases are all very contagious and mostly affect infants, children and young adults. The measles, mumps, rubella vaccine (MMR vaccine) is one vaccine that protects against all three diseases.</td>
                         </tr>
                 </tbody>
             </table>
         </div>
+        <script>
+      var myTable =  $('#myData').DataTable({
+      	paging:true,
+      	bFilter:true,
+      	ordering:true,
+      	searching:true,
+      	dom:'t'
+      });
+      $('#inputText').keyup(function(){
+      	myTable.search($(this).val()).draw();
+      })
+        </script>
     </div>
 
 </body>
