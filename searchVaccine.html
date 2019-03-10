@@ -35,20 +35,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./dashboard.html">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./searchVaccine.html">Vaccine Search</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./searchVaccine.html">Vaccine Search</a>
+                    </li>
                 </ul>
                 <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link " href="./notifications.html">
-                                <!-- <img id="gear" src="./assets/settings.png"/> -->
-                                Notifications
-                            </a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./notifications.html">
+                            <!-- <img id="gear" src="./assets/settings.png"/> -->
+                            Notifications
+                        </a>
+                    </li>
                 </ul>
                 <form action="./index.html">
                     <button type="submit" class="btn btn-primary">Sign out</button>
@@ -58,9 +58,67 @@
     </div> <!-- End of Nav-->
 
     <div class="container">
-            <h2>Vaccine Search</h2>
-
+        <h2>Vaccine Search</h2>
+        <form class="form-inline my-2 my-lg-0 float-right">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for vaccine or disease" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                
+        </form>
+        <br>
+        <div style="padding-top: 30px;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Age(s) of Administraion</th>
+                        <th scope="col">Disease</th>
+                        <th scope="col">Vaccine</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">2 and 4 months old <br> 18 months old</th>
+                        <td>Diphtheria</td>
+                        <td>DTaP-IPV-Hib Vaccine</td>
+                        <td>
+                                Diphtheria is a serious disease of the nose, throat and skin. It causes sore throat, fever and chills. It can be complicated by breathing problems, heart failure and nerve damage. Diphtheria kills about one out of every 10 people who get the disease. It is most often passed to others through coughing and sneezing.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
+
 </html>
