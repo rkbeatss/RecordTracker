@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -25,9 +35,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <!--        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./dashboard.html">Dashboard</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./searchVaccine.html">Vaccine Search</a>
+                    </li>
+                </ul>
+                <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link " href="./notifications.html">
+                                <!-- <img id="gear" src="./assets/settings.png"/> -->
+                                Notifications
+                            </a>
+                        </li>
                 </ul>
                 <form action="./index.html">
                     <button type="submit" class="btn btn-primary">Sign out</button>
@@ -38,28 +59,321 @@
 
     <div class="container">
         <h2>Welcome, Ketan</h2>
-        <h3>Your Infant Profile(s)</h3>
+
         <form class="form-inline">
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Add an infant profile</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Add a new infant profile</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Add information about your infant.</h6>
+                    <br>
+                    <a href="#" onclick="document.getElementById('id03').style.display='block'">
+                        <img id="plusIcon" src="./assets/add-circular-outlined-button.png">
+                    </a>
                 </div>
             </div>
-
-            <input class="form-control col-1" type="text" id="numPanels" />
-            <button type="button" class="btn btn-info" id="btnGen">Generate</button>
-
         </form>
         <br>
         <div class="row" id="contentPanel">
 
         </div>
     </div>
+
+
+    <!-- The Signup Modal -->
+    <div id="id03" class="modal">
+        <div class="col-sm-3">
+            <div class="card">
+                <span onclick="document.getElementById('id03').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <br>
+                <div class="card-body" style="padding: 1.25rem">
+                    <h4 class="card-title mb-4 mt-1">Add your infant's information below</h4>
+                    <form role="form" data-toggle="validator" action="">
+                        <div class="form-group">
+                            <label>Infant's First Name</label>
+                            <input type="text" id="infantFN" class="form-control" placeholder="First Name" autofocus
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Infant's Last Name</label>
+                            <input type="text" id="infantLN" class="form-control" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Infant's Date of Birth</label>
+                            <div id="from-datepicker" class="input-group-append date">
+                                <input class="form-control" data-format="dd/MM/yyyy" type="text"
+                                    placeholder="dd/mm/yyyy"></input>
+                                <span class="input-group-text">
+                                    <!-- <img class="calendarImg" src="./assets/calendar.png"></img> -->
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Infant's Sex</label><br>
+                            <label class="radio-inline">
+                                <input type="radio" id="infantMale" name="sex" required> Male </label> &nbsp;
+                            <label class="radio-inline">
+                                <input type="radio" id="infantLast" name="sex"> Female </label> &nbsp;
+                        </div>
+                        <div class="form-group">
+                            <label>Health Concerns</label>
+                            <textarea class="form-control" id="infantHC" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Medications Taken</label>
+                            <textarea class="form-control" id="infantMT" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" onclick="document.getElementById('id03').style.display='none'" class="btn btn-primary btn-block" id="btnAddPrfl"> Add profile
+                            </button>
+                        </div>
+                    </form>
+                </div> <!-- card-body end .// -->
+            </div>
+        </div>
+    </div> <!-- modal.// -->
+
+    <!-- The Timeline Modal -->
+    <div id="id04" class="modal">
+        <div class="col-sm-8">
+            <div class="card">
+                    <span onclick="document.getElementById('id04').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <div class="container">
+                    <div class="page-header">
+                        <h1 id="timeline">Timeline</h1>
+                    </div>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago
+                                            via
+                                            Twitter</small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
+                                        Interagi
+                                        no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat,
+                                        aliquet quis
+                                        tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar
+                                        pellentesque
+                                        nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean
+                                        ut ante
+                                        turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit
+                                        auctor.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus,
+                                        non
+                                        scelerisque augue. Aenean justo massa.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+                                        depois
+                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                        girarzis,
+                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
+                                        pindureta
+                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
+                                        latim.
+                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- modal.// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--SCRIPTS-->
+
+    <!-- Profile Card Generation -->
+    <script>
+        //Input Variables
+        var firstName = document.getElementById('infantFN').value;
+        var lastName = document.getElementById('infantLN').value;
+        var dOB = document.getElementById('from-datepicker').value;
+        var sex = document.getElementById('infantLN').value;//document.querySelector('input[name = "sex"]:checked').value;
+        var healthConcerns = document.getElementById('infantHC').value;
+        var medsTaken = document.getElementById('infantMT').value;
+
+        function makeid() {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < 5; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            return text;
+
+        }
+        var randomID = makeid();
+
+        console.log(randomID);
+        //Profile Card Generation
+        var addCols = function () {
+
+            var myPanel = $('<div class="col-sm-6 col-md-4 col-lg-3 mt-4"><div class="card card-inverse card-info"><img class="card-img-top" src="./assets/cute-baby.jpg"><div class="card-block" id="' + 'blag' + '"></div><div class="card-footer"><button class="btn btn-info btn-sm" onclick="document.getElementById(' + "'id04'" + ').style.display=' + "'block'" + '">View Vaccination Timeline</button></div></div></div>');
+            myPanel.appendTo('#contentPanel');
+
+            var infantContent = $('<h4 class="card-title">' + firstName + ' ' + lastName + '</h4><div class="card-text">Date of Birth: ' + dOB + '<br>' + 'Sex: ' + sex + '<br>' + 'Health Concerns: ' + healthConcerns + '<br>' + 'Medications Taken: ' + medsTaken + '<br>' + '</div>');
+            infantContent.appendTo('#blag');
+
+        };
+
+        $('#btnAddPrfl').click(function () {
+            addCols();
+            return false;
+        });
+
+
+    </script>
 </body>
 
 </html>
