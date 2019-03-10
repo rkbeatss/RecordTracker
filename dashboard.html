@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
         integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
         crossorigin="anonymous"></script>
@@ -43,12 +44,12 @@
                     </li>
                 </ul>
                 <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link " href="./notifications.html">
-                                <!-- <img id="gear" src="./assets/settings.png"/> -->
-                                Notifications
-                            </a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./notifications.html">
+                            <!-- <img id="gear" src="./assets/settings.png"/> -->
+                            Notifications
+                        </a>
+                    </li>
                 </ul>
                 <form action="./index.html">
                     <button type="submit" class="btn btn-primary">Sign out</button>
@@ -88,7 +89,7 @@
                 <br>
                 <div class="card-body" style="padding: 1.25rem">
                     <h4 class="card-title mb-4 mt-1">Add your infant's information below</h4>
-                    <form role="form" data-toggle="validator" action="">
+                    <form role="form" data-toggle="validator">
                         <div class="form-group">
                             <label>Infant's First Name</label>
                             <input type="text" id="infantFN" class="form-control" placeholder="First Name" autofocus
@@ -124,7 +125,8 @@
                             <textarea class="form-control" id="infantMT" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" onclick="document.getElementById('id03').style.display='none'" class="btn btn-primary btn-block" id="btnAddPrfl"> Add profile
+                            <button type="submit" onclick="document.getElementById('id03').style.display='none'"
+                                class="btn btn-primary btn-block" id="btnAddPrfl"> Add profile
                             </button>
                         </div>
                     </form>
@@ -137,171 +139,431 @@
     <div id="id04" class="modal">
         <div class="col-sm-8">
             <div class="card">
-                    <span onclick="document.getElementById('id04').style.display='none'" class="close"
+                <span onclick="document.getElementById('id04').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
                 <div class="container">
                     <div class="page-header">
-                        <h1 id="timeline">Timeline</h1>
+                        <h1 id="timeline">Vaccination Timeline</h1>
                     </div>
                     <ul class="timeline">
                         <li>
-                            <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                            <div id="warn1" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago
-                                            via
-                                            Twitter</small></p>
+                                    <h4 class="timeline-title">Diphtheria, tetanus, pertussis, polio, haemophilus
+                                        influenza type b vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>2 and 4 months old</b></small></p>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                    <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                                        Interagi
-                                        no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat,
-                                        aliquet quis
-                                        tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar
-                                        pellentesque
-                                        nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean
-                                        ut ante
-                                        turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit
-                                        auctor.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus,
-                                        non
-                                        scelerisque augue. Aenean justo massa.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    <p>Diphtheria, Tetanus, acellular Pertussis, Polio and Haemophilus influenzae type b
+                                        (DTaP-IPV-Hib) is a combined vaccine that protects children against five
+                                        diseases ― diphtheria, tetanus, pertussis, polio and serious diseases like
+                                        meningitis caused by the Hib (Haemophilus influenzae type b) germ. The
+                                        abbreviation "aP" stands for "acellular pertussis.".</p>
                                     <hr>
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
-                                            data-toggle="dropdown">
-                                            <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
+                                        <button type="button" id="btnComp1"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass = function () {
+                                                $('#warn1').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp1').click(function () {
+                                                changeClass();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                            <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                            Completed
+                                        </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End of One Panel-->
+                        <li class="timeline-inverted">
+                            <div id="warn2" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Pneumococcal conjugate vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>2 and 4 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Pneumococcal disease is an infection caused by bacteriacalled Streptococcus
+                                        pneumoniae (or pneumococcus). Pneumococcal infections can range from ear
+                                        andsinus infections, to pneumonia and infections in the blood stream. Every
+                                        year, almost 500,000 deaths among children under five years of age are caused by
+                                        pneumococcal disease around the world.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp2"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass2 = function () {
+                                                $('#warn2').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp2').click(function () {
+                                                changeClass2();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
+                            <div id="warn3" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                    <h4 class="timeline-title">Rotavirus vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>2 and 4 months old</b></small></p>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    <p>Rotavirus is a contagious
+                                        virus that can cause gastroenteritis (inflammation of
+                                        the stomach and intestines). Severe rotavirus infections
+                                        affect mostly babies and young children and cause fever,
+                                        diarrhea (loose bowel movements) and vomiting. Diarrhea
+                                        and vomiting can cause serious dehydration (loss of body
+                                        fluids), sometimes leading to the need for hospitalization.
+                                        Rotavirus is the most common cause of severe diarrhea,
+                                        and hospitalization for diarrhea, in children. Before
+                                        rotavirus vaccination programs started in Canada, most
+                                        children were infected with rotavirus at least once before
+                                        they turned five years of age.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp3"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass3 = function () {
+                                                $('#warn3').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp3').click(function () {
+                                                changeClass3();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
                                 </div>
                             </div>
                         </li>
+                        <!--End of One Panel-->
                         <li class="timeline-inverted">
-                            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                            <div id="warn4" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                    <h4 class="timeline-title">Diphtheria, tetanus, pertussis, polio, haemophilus
+                                        influenza type b vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>6 months old</b></small></p>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                                        depois
-                                        divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
-                                        girarzis,
-                                        nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma
-                                        pindureta
-                                        quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci
-                                        latim.
-                                        Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    <p>Diphtheria, Tetanus, acellular Pertussis, Polio and Haemophilus influenzae type b
+                                        (DTaP-IPV-Hib) is a combined vaccine that protects children against five
+                                        diseases ― diphtheria, tetanus, pertussis, polio and serious diseases like
+                                        meningitis caused by the Hib (Haemophilus influenzae type b) germ. The
+                                        abbreviation "aP" stands for "acellular pertussis.".</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp4"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass4 = function () {
+                                                $('#warn4').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp4').click(function () {
+                                                changeClass4();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="warn5" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Rotavirus vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>6 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Rotavirus is a contagious
+                                        virus that can cause gastroenteritis (inflammation of
+                                        the stomach and intestines). Severe rotavirus infections
+                                        affect mostly babies and young children and cause fever,
+                                        diarrhea (loose bowel movements) and vomiting. Diarrhea
+                                        and vomiting can cause serious dehydration (loss of body
+                                        fluids), sometimes leading to the need for hospitalization.
+                                        Rotavirus is the most common cause of severe diarrhea,
+                                        and hospitalization for diarrhea, in children. Before
+                                        rotavirus vaccination programs started in Canada, most
+                                        children were infected with rotavirus at least once before
+                                        they turned five years of age.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp5"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass5 = function () {
+                                                $('#warn5').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp5').click(function () {
+                                                changeClass5();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End of One Panel-->
+                        <li class="timeline-inverted">
+                            <div id="warn6" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Pneumococcal conjugate vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>12 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Pneumococcal disease is an infection caused by bacteria
+                                        called Streptococcus pneumoniae (or pneumococcus).
+                                        Pneumococcal infections can range from ear and
+                                        sinus infections, to pneumonia and infections in the
+                                        blood stream. Every year, almost 500,000 deaths
+                                        among children under five years of age are caused by
+                                        pneumococcal disease around the world.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp6"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass6 = function () {
+                                                $('#warn6').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp6').click(function () {
+                                                changeClass6();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="warn7" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Meningococcal conjugate (Men-C-C) vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>12 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Invasive
+                                        meningococcal disease (IMD) is a serious bacterial
+                                        infection caused by the bacterium Neisseria meningitidis
+                                        (commonly known as meningococcus). Five different
+                                        groups of bacteria are most commonly associated
+                                        with IMD in Canada.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp7"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass7 = function () {
+                                                $('#warn7').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp7').click(function () {
+                                                changeClass7();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End of One Panel-->
+                        <li class="timeline-inverted">
+                            <div id="warn8" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Measles, mumps and rubella vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>12 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>The MMR vaccine is a three-in-one needle that protects against measles, mumps and
+                                        rubella (German measles). It should be given to children soon after their first
+                                        birthday. A second dose is given in combination with varicella (chicken pox), as
+                                        MMRV (a four-in-one needle) at 4-6 years of age.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp8"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass8 = function () {
+                                                $('#warn8').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp8').click(function () {
+                                                changeClass8();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="warn9" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Chickenpox (varicella) vaccine</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>15 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Chickenpox is caused by the varicella-zoster virus. About 90% of chickenpox cases
+                                        occur before 12 years of age. Chickenpox is highly contagious. It spreads very
+                                        quickly from person to person. The child will be most contagious from one to two
+                                        days before the rash appears.
+
+                                        The most common way the infection is spread is through the air if someone with
+                                        chickenpox coughs or sneezes. You can also get chickenpox if you touch a blister
+                                        or the liquid from a blister.
+
+                                        A pregnant woman with chickenpox can pass it on to her unborn baby before birth.
+                                        Mothers with chickenpox can also give it to their newborn baby after birth.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp9"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass9 = function () {
+                                                $('#warn9').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp9').click(function () {
+                                                changeClass9();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End of One Panel-->
+                        <li class="timeline-inverted">
+                            <div id="warn10" class="timeline-badge warning"><i
+                                    class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Diphtheria, tetanus, pertussis, polio, haemophilus
+                                        influenza type b</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Administered
+                                            at <b>18 months old</b></small></p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Diphtheria, Tetanus, acellular Pertussis, Polio and Haemophilus influenzae type b
+                                        (DTaP-IPV-Hib) is a combined vaccine that protects children against five
+                                        diseases ― diphtheria, tetanus, pertussis, polio and serious diseases like
+                                        meningitis caused by the Hib (Haemophilus influenzae type b) germ. The
+                                        abbreviation "aP" stands for "acellular pertussis." Hib vaccine is also
+                                        available as a separate shot.</p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" id="btnComp10"
+                                            class="btn btn-info btn-sm">Completed</button>
+                                        <script>
+                                            var changeClass10 = function () {
+                                                $('#warn10').removeClass('warning').addClass('success');
+                                            }
+
+                                            $('#btnComp10').click(function () {
+                                                changeClass10();
+                                                return false;
+                                            });
+
+                                        </script>
+
+                                        <!-- <label class="btn btn-success btn-sm">
+                                                <input type="checkbox" checked autocomplete="off" onclick="changeClass();">
+                                                Completed
+                                            </label> -->
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -309,25 +571,7 @@
                 </div>
             </div>
         </div>
-
-
     </div> <!-- modal.// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -371,6 +615,19 @@
             addCols();
             return false;
         });
+
+
+
+        // Exit timeline modal by clicking on the outisde
+        // Get the modal
+        var modal = document.getElementById('id04');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
 
     </script>
