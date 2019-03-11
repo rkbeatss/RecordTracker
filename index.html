@@ -52,7 +52,7 @@
           title="Close Modal">&times;</span>
         <br>
         <div class="card-body">
-          <a href="" class="float-right btn btn-outline-primary">Sign up</a>
+          <a onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'" href="#" class="float-right btn btn-outline-primary">Sign up</a>
           <h4 class="card-title mb-4 mt-1">Sign in</h4>
           <form role="form" data-toggle="validator" action="./dashboard.html">
             <div class="form-group">
@@ -86,7 +86,7 @@
           title="Close Modal">&times;</span>
         <br>
         <div class="card-body" style="padding: 1.25rem">
-          <a href="" class="float-right btn btn-outline-primary">Log in</a>
+          <a onclick="document.getElementById('id02').style.display='none';document.getElementById('id01').style.display='block'" href="#" class="float-right btn btn-outline-primary">Log in</a>
           <h4 class="card-title mb-4 mt-1">Sign up</h4>
           <form role="form" data-toggle="validator" action="./dashboard.html">
             <div class="form-group">
@@ -131,7 +131,7 @@
             <small class = "text-muted"> By clicking 'Sign up' button, you confirm that you accept our <br> Terms of use and Privacy Policy. </small>
           </form>
           </article> <!-- card-body end .// -->
-          <div class="border-top card-body text-center">Already have an account? <a href="">Log in</a></div>
+          <div class="border-top card-body text-center">Already have an account? <a onclick="document.getElementById('id02').style.display='none';document.getElementById('id01').style.display='block'" href="#">Log in</a></div>
           </div> 
         </div>
         </div>
@@ -142,12 +142,12 @@
   
   <script>
     // Get the modal
-    var modal = document.getElementById('id01');
+    var modal1 = document.getElementById('id01');
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    window.onclick = function (event1) {
+      if (event1.target == modal1) {
+        modal1.style.display = "none";
       }
     }
 
@@ -155,8 +155,8 @@
     var modal2 = document.getElementById('id02');
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal2) {
+    window.onclick = function (event2) {
+      if (event2.target == modal2) {
         modal2.style.display = "none";
       }
     }
@@ -166,7 +166,7 @@
 
 
   <div class="front-text">
-        <h1 style="color:white;">An online vaccination record tool</h1>
+        <h1 style="color:white;">An online vaccination record tool.</h1>
         <p>Never miss a vaccination appointment. <a onclick="document.getElementById('id02').style.display='block'" href="#">Sign up</a> today to keep track of your infant's vaccination records.</p>
   </div>
 
