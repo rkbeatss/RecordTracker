@@ -97,12 +97,7 @@
                 </label>
             </div>
         </div>  
-        <div class="row" id="emailField" style="display:none;">
-            <div class="col-lg-1">
-                Hello
-            </div>
-        </div>
-        <div class="row">
+              <div class="row">
             <div class="col-lg-1">
                 <label> SMS </label>
             </div>
@@ -112,13 +107,32 @@
                 </label>
             </div>
         </div>
+          <div class="row" id="emailField">
+            <div class="col-lg-4">
+              <input name="" class="form-control" placeholder="Enter your email" type="email" required>
+            </div>
+        </div>
+        <br>
+        <div class="row" id="smsField">
+            <div class="col-lg-4">
+              <input name="" class="form-control" placeholder="Enter your phone number" type="number" required>
+            </div>
+        </div>
+        <br>
         <div class="row">
         <div class="col-lg-3">
-                <button type="submit" class="btn btn-primary btn-block"> Save Changes </button>
+                <button type="submit" class="btn btn-primary btn-block" data-dismiss="alert"> Save Changes </button>
+                <div class="alert alert-success">
+                Successfully saved changes!
         </div>
     </div>
+    </div>
 <script>
-
+$(document).ready(function(){
+    $('button').click(function(){
+        $('.alert').show();
+    }) 
+});
   $(function () {
             $('#datetimepicker12').datetimepicker({
                 inline: true,
