@@ -29,6 +29,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 
+
 </head>
 
 <body>
@@ -72,12 +73,14 @@
             </div>
             <div class="col">
             <label class="checkbox-inline">
-                <input type="checkbox" id = "chkSettings" data-toggle = "toggle" data-on = "Enabled" data-off = "Disabled" data-onstyle = "success" data-offstyle = "danger" data-size = "small">
+                <input type="checkbox" id = "chkSettings" 
+                data-toggle = "collapse" href="#timeModal">
             </label>
         </div>
     </div>
+    <div class="collapse" id="timeModal">
         <div style="overflow:hidden;">
-            <div class="form-group" id = "timeModal">
+            <div class="form-group">
                 <div class = "row">
                     <div class="col-md-8">
                         <div id="datetimepicker12"></div>
@@ -93,7 +96,7 @@
             </div>
             <div class="col">
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="email" data-toggle = "toggle" data-size = "small" data-on="On" data-off="Off" data-onstyle="success" data-offstyle = "danger">
+                    <input type="checkbox" id="email" data-toggle = "collapse" href="#emailField">
                 </label>
             </div>
         </div>  
@@ -103,21 +106,26 @@
             </div>
             <div class="col">
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="sms" data-toggle="toggle" data-size="small" data-on="On" data-off="Off" data-onstyle="success" data-offstyle = "danger">
+                    <input type="checkbox" id="sms" data-toggle="collapse" href="#smsField">
                 </label>
             </div>
         </div>
-          <div class="row" id="emailField">
+          <div class = "collapse" id="emailField">
+            <div class="row">
             <div class="col-lg-4">
               <input name="" class="form-control" placeholder="Enter your email" type="email" required>
             </div>
         </div>
+        </div>
         <br>
-        <div class="row" id="smsField">
+        <div class = "collapse" id="smsField">
+            <div class="row">
             <div class="col-lg-4">
               <input name="" class="form-control" placeholder="Enter your phone number" type="number" required>
             </div>
         </div>
+        </div>
+    </div>
         <br>
         <div class="row">
         <div class="col-lg-3">
