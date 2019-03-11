@@ -95,7 +95,7 @@
                 <br>
                 <div class="card-body" style="padding: 1.25rem">
                     <h4 class="card-title mb-4 mt-1">Add your infant's information below</h4>
-                    <form role="form" data-toggle="validator" id="profileForm">
+                    <form role="form" data-toggle="validator" id="profileForm" >
                         <div class="form-group">
                             <label>Infant's First Name</label>
                             <input type="text" id="infantFN" name="firstName" class="form-control"
@@ -150,9 +150,9 @@
     </div> <!-- modal.// -->
 </div>
     <!-- The Timeline Modal -->
-    <div id="id04" class="modal">
+    <div id="id04" class="modal" align="center">
         <div class="col-sm-8">
-            <div class="card">
+            <div class="card" >
                 <span onclick="document.getElementById('id04').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
                 <div class="container">
@@ -620,7 +620,7 @@
             var randomID = makeid();
             console.log(randomID);
 
-            var myPanel = $('<div class="col-sm-6 col-md-4 col-lg-3 mt-4"><div class="card card-inverse card-info"><img class="card-img-top" src="./assets/cute-baby.jpg"><div class="card-block" id="' + randomID + '"></div><div class="card-footer"><button class="btn btn-info btn-sm" onclick="document.getElementById(' + "'id04'" + ').style.display=' + "'block'" + '">View Vaccination Timeline</button></div></div></div>');
+            var myPanel = $('<div class="col-sm-6 col-md-4 col-lg-3 mt-4" style="width: 21.5em;margin:0 auto;"><div class="card card-inverse card-info"><img class="card-img-top" src="./assets/cute-baby.jpg"><div class="card-block" id="' + randomID + '"></div><div class="card-footer"><button class="btn btn-info btn-sm" onclick="document.getElementById(' + "'id04'" + ').style.display=' + "'block'" + '">View Vaccination Timeline</button></div></div></div>');
 
             myPanel.appendTo('#contentPanel');
 
