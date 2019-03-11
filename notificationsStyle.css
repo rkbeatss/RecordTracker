@@ -5,3 +5,9 @@
 .container{
 padding-top: 60px;
 }
+.alert{
+	display:none;
+}
+.hide {
+	display:none;
+}
